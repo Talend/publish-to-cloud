@@ -1,0 +1,46 @@
+name: 'Talend Publish to Cloud Action'
+description: 'GitHub Action to publish your jobs and microservices to Talend Cloud'
+author: tgourdel
+
+inputs:
+  project: 
+    description: 'Talend Cloud Project name (always uppercase in your git repository)'
+    required: true
+  p2_url: 
+    description: 'P2 repository URL'
+    required: true
+  cloud_url: 
+    description: 'Talend Cloud url'
+    required: false
+    default: 'https://tmc.us.cloud.talend.com/inventory/'
+  cloud_token: 
+    description: 'Talend Personal Access token (PAT) for Talend Cloud'
+    required: true
+  nexus_url: 
+    description: 'Nexus URL for Talend Maven plugins and shared custom libraries'
+    required: true
+  nexus_username: 
+    description: 'Nexus username'
+    required: true
+  nexus_password: 
+    description: 'Nexus password'
+    required: true
+  screenshot: 
+    description: 'Option to publish a screenshot to Talend Cloud'
+    required: false
+    default: 'true'
+  license_path:
+    description: 'Talend license path in your repository. Make sure to encrypt your license.'
+    required: false
+    default: 'license.gpg'
+  license_passphrase:
+    description: 'Passphrase used to encrypt Talend license in your repository. Make sure to store the passphrase in a secret.'
+    required: yes
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'upload-cloud'
+  color: 'green'
