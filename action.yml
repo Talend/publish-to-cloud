@@ -6,16 +6,40 @@ inputs:
   project: 
     description: 'Talend Cloud Project name (always uppercase in your git repository)'
     required: true
-  p2_url: 
+  updatesite_path: 
     description: 'P2 repository URL'
     required: true
-  cloud_url: 
-    description: 'Talend Cloud url'
+  service_url: 
+    description: 'Talend Cloud URL'
     required: false
     default: 'https://tmc.us.cloud.talend.com/inventory/'
+  service_accelerate: 
+    description: 'Publish accelerate option (default to true)'
+    required: false
+    default: 'true'
   cloud_token: 
     description: 'Talend Personal Access token (PAT) for Talend Cloud'
     required: true
+  cloud_publisher_skip:
+    description: 'Publish skip option (defaut to false)'
+    required: false
+    default: 'false'
+  cloud_publisher_screenshot: 
+    description: 'Talend Personal Access token (PAT) for Talend Cloud'
+    required: false
+    default: 'true'
+  cloud_publisher_updateflow: 
+    description: 'Updateflow option (default to true)'
+    required: false
+    default: 'true'
+  cloud_publisher_environment: 
+    description: 'Talend Cloud environment'
+    required: false
+    default: '<default>'
+  cloud_publisher_workspace: 
+    description: 'Talend Cloud workspace'
+    required: false
+    default: 'Personal'
   nexus_url: 
     description: 'Nexus URL for Talend Maven plugins and shared custom libraries'
     required: true
@@ -25,10 +49,6 @@ inputs:
   nexus_password: 
     description: 'Nexus password'
     required: true
-  screenshot: 
-    description: 'Option to publish a screenshot to Talend Cloud'
-    required: false
-    default: 'true'
   license_path:
     description: 'Talend license path in your repository. Make sure to encrypt your license.'
     required: false
