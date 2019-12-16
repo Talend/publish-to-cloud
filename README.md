@@ -27,8 +27,8 @@ jobs:
       with:
         args: -e -am
         project: <YOUR_PROJECT_NAME>
-        p2_url: <YOUR_P2_URL>
-        cloud_url: https://tmc.<REGION>.cloud.talend.com/inventory/
+        updatesite_path: <YOUR_UPDATESITE_URL>
+        service_url: https://tmc.<REGION>.cloud.talend.com/inventory/
         cloud_token: ${{ secrets.cloud_token }}
         nexus_url: <YOUR_NEXUS_URL>
         nexus_username: ${{ secrets.nexus_username }}
