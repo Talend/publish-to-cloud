@@ -1,8 +1,8 @@
-# GitHub Action to publish your jobs and microservices to Talend Cloud
+# GitHub Action to publish data integration jobs and data services to Talend Cloud
 
 With the Talend Publish to Cloud Action for GitHub, you can automate your workflow to deploy [Talend jobs](https://www.talend.com/products/data-integration/) and [microservices](https://www.talend.com/solutions/information-technology/service-oriented-architecture/) to Talend Cloud using GitHub Actions.
 
-[Try Talend Cloud free for 14 days.](https://iam.us.cloud.talend.com/idp/trial-registration?type=productspage)!
+[Try Talend Cloud free for 14 days!](https://iam.us.cloud.talend.com/idp/trial-registration?type=productspage)
 
 The definition of this Github Action is in [action.yml](https://github.com/Talend/publish-to-cloud/blob/master/action.yml).
   
@@ -47,8 +47,9 @@ For the storing the Talend license we highly recommand to follow [Github Actions
 *Example*:
 
 1. Run the following command from your terminal to encrypt the my_secret.json file using gpg and the AES256 cipher algorithm.
-
-`gpg --symmetric --cipher-algo AES256 license`
+```
+gpg --symmetric --cipher-algo AES256 license
+```
 
 2. You will be prompted to enter a passphrase. Remember the passphrase, because you'll need to create a new secret on GitHub that uses the passphrase as the value.
 
